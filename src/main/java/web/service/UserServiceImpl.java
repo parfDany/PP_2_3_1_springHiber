@@ -21,16 +21,18 @@ public class UserServiceImpl implements UserService {
         return userDao.listAll();
     }
 
+    @Transactional
     public void delete(Long id) {
         userDao.delete(id);
     }
 
+    @Transactional
     public void save(User user) {
         userDao.save(user);
     }
 
+    @Transactional
     public void update(Long id, User updatedUser) {
-
         userDao.update(id, updatedUser);
     }
 
